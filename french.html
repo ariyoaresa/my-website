@@ -10,9 +10,10 @@
  right: 22px;
  gap: 10px;
  display: flex;
+ font-size: 18px;
 }
 a:visited{
- text-decotation: underline;
+ text-decoration: underline;
 }
 .title{
  position: relative;
@@ -35,8 +36,8 @@ button{
  right: 30px;
 }
 .logo{
- height: 80px;
- width: 100px;
+ height: 120px;
+ width: 210px;
 }
 .below{
  position: absolute;
@@ -44,8 +45,23 @@ button{
  background-color: black;
  width: 100%;
  padding: 0px;
+ height: 400px;
+ gap: 10px;
+}
+.down{
+ text-decoration: none;
+ color: white;
+ font-size: 30px;
+}
+#link{
+ gap: 10px;
+ color: blue;
 }
 </style>
+<head>
+<title>Ariyo Aresa</title>
+<meta charset="UTF-8">
+</head>
 <body>
 <div class="nav">
  <a href="#">Home🏡</a>
@@ -59,17 +75,22 @@ button{
 <div clss="body">
 <p>Ariyo Olatunji- Aresa est développeur web, hacker éthique et également graphiste.</p>
 <p>Il est le PDG d'Ariz Tech où il se spécialise dans le développement Web, le piratage éthique et la conception graphique et enseigne également aux gens ses compétences acquises.</p>
-<p>Il a acquis divers certificats dans ses différents domaines de connaissances, ces certificats sont listés dans son <a href="#">curriculum vitae</a></p>
+<p>Il a acquis divers certificats dans ses différents domaines de connaissances, ces certificats sont listés dans son <a href="cv.jpg">curriculum vitae</a></p>
 </div>
 <img src="mypic.png" alt="Ariyo's picture" class="me">
 <div class="download">
 <button><a href="cv.jpg" download>Download C.V</a></button>
 </div>
 <div class="below">
-<p><a href="https://www.facebook.com/ariyo.aresa">Facebook</a>
-<a href="https://www.instagram.com/ariyoaresa">Instagram</a>
-<a href="https://www.github.com/ariyoaresa">GitHub</a></p>
-<a href="https://www.github.com/ariyoaresa/my-website">View source code</a>
+<p><a href="https://www.facebook.com/ariyo.aresa" class="down" id="link">Facebook</a>
+<a href="https://www.instagram.com/ariyoaresa" class="down" id="link">Instagram</a>
+<a href="https://www.github.com/ariyoaresa" class="down" id="link">GitHub</a></p>
+<a href="https://www.github.com/ariyoaresa/my-website" class="down" id="link">View source code</a>
+<div class="lang">
+<p class="down">Languages</p>
+<a href="index.html" class="down" id="link">English</a>
+<a href="french.html" class="down" id="link">French</a>
+</div>
 </div>
 </body>
 </html>
