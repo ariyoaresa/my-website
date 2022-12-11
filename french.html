@@ -1,9 +1,13 @@
 <! DOCTYPE html>
 <html>
 <style>
+    body{
+        background-color: white;
+    }
 .nav a{
  text-decoration: none;
  color: blue;
+ font-size: 40px;
 }
 .nav{
  position: absolute;
@@ -19,34 +23,35 @@ a:visited{
  position: relative;
  top: 20px;
 }
-.body:first-letter {
- color: blue;
+h4{
+ text-decoration: underline;
 }
 button a{
  text-decoration: none;
  color: white;
+ font-size: 30px;
 }
 button{
- background-color: blue;
+ background-color: blue;<p></p>
+ width: 300px;
+ height: 70px;
+ border-radius: 7px;
+ position: relative;
 }
 .me{
  border-radius: 50%;
- height: 170px;
- position: absolute;
+ height: 340px;
+ position: relative;
  right: 30px;
 }
 .logo{
- height: 120px;
- width: 210px;
+ height: 160px;
+ width: 250px;
 }
 .below{
- position: absolute;
- bottom: 7px;
- background-color: black;
+ background-color: #CA181166;
  width: 100%;
- padding: 0px;
- height: 400px;
- gap: 10px;
+ gap:10px
 }
 .down{
  text-decoration: none;
@@ -54,8 +59,36 @@ button{
  font-size: 30px;
 }
 #link{
- gap: 10px;
  color: blue;
+ font-size: 50px;
+}
+ion-icon{
+ font-size: 100px;
+}
+.side-bar ion-icon{
+    top: 2%;
+    right: 5%;
+    position: absolute;
+    font-size: 50px;
+    display: none;
+}
+@media(max-width:980px){
+    .side-bar ion-icon{
+        display: block;
+        font-size: 110px;
+    }
+    .nav{
+        display: grid;
+        background-color: blue;
+        top: -90%;
+        width: 100%;
+        transition: .4s;
+    }
+    .nav a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 50px;
 }
 </style>
 <head>
@@ -63,35 +96,56 @@ button{
 <meta charset="UTF-8">
 </head>
 <body>
-<div class="nav">
- <a href="#">Home🏡</a>
- <a href="#">About Me🆎</a>
+<div class="nav" id="nav">
+ <a href="/my-website">Home🏡</a>
  <a href="cv.jpg">My C.V📄</a>
 </div>
-<img src="ariz.jpg" alt="Logo" class="logo">
+<div class="side-bar">
+    <ion-icon name="menu-outline" onclick="side()"></ion-icon>
+</div>
+<a href="https://ariyoaresa.github.io/my-website"></a><img src="ariz.png" alt="Logo" class="logo"></a>
 <div class="title">
-<center><h4>Bienvenue sur le blog Ariz</h4></center>
+<center><h4>Bienvenue sur le portfolio Ariz</h4></center>
 </div>
 <div clss="body">
 <p>Ariyo Olatunji- Aresa est développeur web, hacker éthique et également graphiste.</p>
-<p>Il est le PDG d'Ariz Tech où il se spécialise dans le développement Web, le piratage éthique et la conception graphique et enseigne également aux gens ses compétences acquises.</p>
+<p>Il est le PDG d'Ariz Tech où il se spécialise dans le développement Web, le piratage éthique et la conception graphique et enseigne également aux gens ses compétences acquises</p>
 <p>Il a acquis divers certificats dans ses différents domaines de connaissances, ces certificats sont listés dans son <a href="cv.jpg">curriculum vitae</a></p>
+<center><h4>His Accomplishments</h4></center>
+<p>Ariyo Aresa has created many websites including <a href="https://sites.google.com/view/ariyoslibrary">Ariyoslibrary</a> amongst others.</p>
+<p>He has also created unique designs ranging from logos to thumbnails and business cards for companies</p>
+<p>Ariyo Aresa is also a cyber security professional and also a pentester</p>
 </div>
+<center>
 <img src="mypic.png" alt="Ariyo's picture" class="me">
 <div class="download">
 <button><a href="cv.jpg" download>Download C.V</a></button>
 </div>
+</center>
 <div class="below">
-<p><a href="https://www.facebook.com/ariyo.aresa" class="down" id="link">Facebook</a>
-<a href="https://www.instagram.com/ariyoaresa" class="down" id="link">Instagram</a>
-<a href="https://www.github.com/ariyoaresa" class="down" id="link">GitHub</a></p>
-<a href="https://www.github.com/ariyoaresa/my-website" class="down" id="link">View source code</a>
-<div class="lang">
+<center>
+<p><a href="https://www.facebook.com/ariyo.aresa" class="down" id="link"><ion-icon name="logo-facebook"></ion-icon></a>
+<a href="https://www.instagram.com/ariyoaresa" class="down" id="link"><ion-icon name="logo-instagram"></ion-icon></a>
+<a href="https://m.youtube.com/channel/UCSjTtsRLzcQSKpPRMx6Qe5A" class="down" id="link"><ion-icon name="logo-youtube"></ion-icon></a>
+<a href="https://www.github.com/ariyoaresa" class="down" id="link"><ion-icon name="logo-github"></ion-icon></a></p>
+<a href="https://www.github.com/ariyoaresa/my-website" class="down" target="blank" id="link">View source code</a>
 <p class="down">Languages</p>
+</center>
+<center>
+<div class="lang">
 <a href="index.html" class="down" id="link">English</a>
 <a href="french.html" class="down" id="link">French</a>
 <a href="yoruba.html" class="down" id="link">Yoruba</a>
 </div>
+</center>
 </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    var menu = document.getElementById("nav")
+    function side() {
+        menu.style.top = ("20%")
+    }
+</script>
 </body>
 </html>
