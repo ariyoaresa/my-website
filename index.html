@@ -145,8 +145,12 @@ ion-icon{
 <script>
     var menu = document.getElementById("nav")
     function side() {
-        menu.style.top = ("20%")
-    }
+        if (menu.style.top == "-90%") {
+            menu.style.top = "20%"
+        } else {
+           menu.style.top = "-90%"
+        }
+      }
 </script>
 </body>
 </html>
